@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SideHustle Week 3 Task</title>
+    <link rel="Stylesheet" href="style.css" />
+    <style>
+      .mosh {
+        width: 150px;
+        margin: 20px;
+        float: left;
+      }
+      Img {
+        width: 100px;
+        margin: 20px;
+        border-radius: 10px;
+      }
+    </style>
+    <script type="text/javascript">
+      function validateForm() {
+        var name = document.forms["myForm"]["name"].value;
+        var email = document.forms["myForm"]["email"].value;
+        var phone = document.forms["myForm"]["phone"].value;
+        var gender = document.forms["myForm"]["gender"].value;
+        var password = document.forms["myForm"]["password"].value;
+
+        if (name == "") {
+          alert("Name can not be blank");
+          return false;
+        }
+
+        if (email == "") {
+          alert("Email address must be filled out");
+          return false;
+        }
+
+        if (phone == "") {
+          alert("Phone number must be filled out");
+          return false;
+        }
+
+        if (gender == "") {
+          alert("Gender must be selected");
+          return false;
+        }
+
+        if (password == "") {
+          alert("Password must be filled out");
+          return false;
+        }
+
+        alert("Form submitted successfully!");
+        return true;
+      }
+    </script>
+  </head>
+  <body>
+    <img
+      class="mosh"
+      src="640px-Interswitch_logo.svg.png"
+      alt="The Switch Company Logo"
+    />
+    <ul class="menu">
+      <li>
+        <a href="#"> About us</a>
+        <ul class="sub-menu">
+          <li>Overview</li>
+          <li>Our Brands</li>
+          <li>Leadership</li>
+          <li>Corporate Governance</li>
+          <li>Careers</li>
+        </ul>
+      </li>
+      <li>
+        <a href="#"> What we do</a>
+        <ul class="sub-menu">
+          <li>Everyday Payments for Individuals</li>
+          <li>Payments Solutions for SMEs & Corporate</li>
+          <li>Payment Cards & Tokens</li>
+          <li>Payment Solutions for Industries</li>
+        </ul>
+      </li>
+      <li><a href="#">Financial Inclusion</a></li>
+      <li><a href="#">Corporate responsibility</a></li>
+      <li><a href="#">News & Insights</a></li>
+    </ul>
+    <img src="640px-Flag_of_Nigeria.png" alt="The Nigerian Flag" />
+
+    <form name="myForm" onsubmit="return validateForm()">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required /><br />
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required /><br />
+      <label for="Phone">Phone No:</label>
+      <input type="tel" id="phone" name="phone" required /><br />
+      <label for="picture">Passport:</label>
+      <input type="file" /><br />
+      <label for="gender">Gender:</label>
+      <select id="gender" name="gender" required>
+        <option value=""></option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+      </select>
+      <br />
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required /><br />
+
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
